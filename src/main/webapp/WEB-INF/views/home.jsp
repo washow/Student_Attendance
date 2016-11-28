@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page session="false" %>
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">Student</a></li>
       <li><a href="#">Professor</a></li> 
-      <li><a href="#">STUFF</a></li> 
+      <li><a href="test.jsp">STUFF</a></li> 
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -35,32 +36,33 @@
     </ul>
   </div>
 </nav>
-<h1>
-	Student Attendance Tracker  
-</h1>
 
-<form class="form-horizontal">
-  <div>
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" >
-  </div>
-  <br>
-  <div>
-  	<label for="SID">Student ID</label>
-  	<input type="text" class="form-control" id="SID" placeholder="SID">
-  </div>
-  <br>
-  <div>
-    <label for="exampleInputPassword1">Key Code</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Code">
-  </div>
-  <br>
+<h2>Student Information</h2>
+<form:form method="POST" action="/HelloWeb/addStudent">
+<form>
+   <table>
+    <tr>
+        <td><form path="name">Name</form></td>
+        <td><form path="name" /></td>
+    </tr>
+    <tr>
+        <td><form path="age">Age</form></td>
+        <td><form path="age" /></td>
+    </tr>
+    <tr>
+        <td><form path="id">id</form></td>
+        <td><form path="id" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Submit"/>
+        </td>
+    </tr>
+</table>  
 </form>
+</form:form> 
 
-<button type="button" class="btn btn-primary">Submit</button> 
 
-<br>
-<br>
 
 <P>  The current time is ${serverTime}. </P>
 

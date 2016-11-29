@@ -3,7 +3,7 @@ package com.group4.studentattendance;
 public class Student {
 	   private Integer age;
 	   private String name;
-	   private Integer id;
+	   private String id;
 
 	   public void setAge(Integer age) {
 	      this.age = age;
@@ -19,10 +19,10 @@ public class Student {
 	      return name;
 	   }
 
-	   public void setId(Integer id) {
+	   public void setId(String id) {
 	      this.id = id;
 	   }
-	   public Integer getId() {
+	   public String getId() {
 	      return id;
 	   }
 	}

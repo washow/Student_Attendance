@@ -8,15 +8,15 @@
 <h2>Submitted Student Information</h2>
    <table>
     <tr>
-        <td>Name</td>
+        <td>Email</td>
         <td>${name}</td>
     </tr>
     <tr>
-        <td>Age</td>
+        <td>Student ID</td>
         <td>${age}</td>
     </tr>
     <tr>
-        <td>ID</td>
+        <td>Key Pass</td>
         <td>${id}</td>
     </tr>
 </table>  
